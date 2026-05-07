@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect width='24' height='24' rx='6' fill='%231E2D6B'/%3E%3Cg stroke='%236B5FED' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 7V5.75C8 4.784 8.784 4 9.75 4h4.5C15.216 4 16 4.784 16 5.75V7'/%3E%3Cpath d='M4.75 8.5h14.5c.966 0 1.75.784 1.75 1.75v7c0 .966-.784 1.75-1.75 1.75H4.75A1.75 1.75 0 0 1 3 17.25v-7c0-.966.784-1.75 1.75-1.75Z'/%3E%3Cpath d='M3 12h18'/%3E%3C/g%3E%3C/svg%3E">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hirely{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}" data-page="{% block page_name %}{% endblock %}">
+    <div class="page-accent" aria-hidden="true"></div>
+    {% block body %}{% endblock %}
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/static/js/app.js" defer></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

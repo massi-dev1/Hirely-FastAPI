@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Job Detail - Hirely{% endblock %}
+{% block body_class %}page-app{% endblock %}
+{% block page_name %}job-detail{% endblock %}
+
+{% block body %}
+<div class="app-shell">
+    <nav class="topbar" id="navbar"></nav>
+    <main class="app-main">
+        <section class="page-header">
+            <div>
+                <a class="subtle-link" href="/browse-jobs">Back to jobs</a>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div id="job-detail-content" data-job-id="{{ job_id }}">
+                <div class="loading-state">
+                    <span class="spinner"></span>
+                    <p>Loading job details</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <span class="footer-logo__job">Hire</span><span class="footer-logo__board">ly</span>
+                </a>
+                <p class="footer-tagline">Connecting talent with opportunity across every industry.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/massi-dev1" target="_blank" aria-label="GitHub" class="social-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:jobboard200@gmail.com" aria-label="Email" class="social-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <a href="/browse-jobs" class="footer-link">Browse Jobs</a>
+                <a href="/signup" class="footer-link">Create Account</a>
+                <a href="/my-applications" class="footer-link">My Applications</a>
+            </div>
+
+            <div class="footer-col">
+               <a href="/post-job" class="footer-link">Post a Job</a>
+               <a href="/dashboard" class="footer-link">Company Dashboard</a>
+               <a href="/browse-jobs" class="footer-link">Browse Candidates</a>
+            </div>
+
+
+            <div class="footer-col">
+                <a href="mailto:jobboard200@gmail.com" class="footer-link">Contact Us</a>
+                <a href="mailto:massinissaslimani33@gmail.com" class="footer-link">Developer</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <span>© 2026 Hirely. All rights reserved.</span>
+            <span>Built by <a href="https://github.com/massi-dev1" target="_blank" style="color:#6B5FED;text-decoration:none;font-weight:600;">Massinissa Slimani</a></span>
+        </div>
+    </div>
+</footer>
+
+</div>
+{% endblock %}
