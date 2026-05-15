@@ -11,7 +11,6 @@ load_dotenv()
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-
 verification_codes: dict[str, dict] = {}
 
 def generate_code() -> str:
@@ -22,20 +21,20 @@ def send_verification_email(to_email: str) -> bool:
 
     verification_codes[to_email] = {
         "code": code,
-        "expires_at": time.time() + 600  # 10 minutes
+        "expires_at": time.time() + 600
     }
 
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "Your verification code - JobBoard"
+    msg["Subject"] = "Your verification code - Hirely"
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = to_email
 
     html = f"""
-    <div style="font-family: Arial, sans-serif; max-width: 400px; margin: auto;">
-        <h2>Email Verification</h2>
+    <div style="font-family: Arial, sans-serif; max-width: 400px; margin: auto; padding: 32px; background: #0D1120; color: #E8EAF0; border-radius: 12px;">
+        <h2 style="color: #6B5FED;">Hire<span style="color: #ffffff;">ly</span></h2>
         <p>Use the code below to verify your email:</p>
-        <h1 style="letter-spacing: 10px; color: #4F46E5;">{code}</h1>
-        <p>This code expires in <strong>10 minutes</strong>.</p>
+        <h1 style="letter-spacing: 10px; color: #6B5FED;">{code}</h1>
+        <p style="color: #4A567A;">This code expires in <strong style="color: #E8EAF0;">10 minutes</strong>.</p>
     </div>
     """
     msg.attach(MIMEText(html, "html"))

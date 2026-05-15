@@ -19,3 +19,9 @@ alembic.ini
 Thumbs.db
 
 *.log
+
+# Nested clone subfolder
+Hirely-FastAPI/
+
+# Pytest cache
+.pytest_cache/
